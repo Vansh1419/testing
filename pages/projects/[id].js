@@ -4,7 +4,8 @@ import { getDoc, getDocs, doc, where } from "firebase/firestore";
 import Navbar from "@/components/Navbar/Navbar";
 
 const individualProject = ({ project }) => {
-  console.log(project);
+  console.log(
+    project.id);
   return (
     <div>
       <Navbar />
@@ -40,6 +41,6 @@ export const getStaticPaths = async () => {
   }));
   return {
     paths,
-    fallback: false,
+    fallback: "blocking",
   };
 };

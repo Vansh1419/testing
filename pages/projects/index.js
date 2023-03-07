@@ -17,7 +17,10 @@ const allProjectPage = ({ projects }) => {
           <div key={project.id} className="my-5">
             <h2 className="text-blue-400">{project.title}</h2>
             <p>{project.description}</p>
-            <Button variant="outlined" onClick={() => router.push(`/projects/${project.id}`)}>
+            <Button
+              variant="outlined"
+              onClick={() => router.push(`/projects/${project.id}`)}
+            >
               View Project
             </Button>
           </div>
